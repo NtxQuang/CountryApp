@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/listCountryFragment"
+        android:name="com.ntxq.countryapp.ui.ListCountryFragment"
+        android:label="fragment_list_country"
+        tools:layout="@layout/fragment_list_country" />
+    <fragment
+        android:id="@+id/detailCountryFragment"
+        android:name="com.ntxq.countryapp.ui.DetailCountryFragment"
+        android:label="fragment_detail_country"
+        tools:layout="@layout/fragment_detail_country" >
+        <argument
+            android:name="country"
+            app:argType="com.ntxq.countryapp.model.Country" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ntxq.countryapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/savedCountryFragment"
+        android:name="com.ntxq.countryapp.ui.SavedCountryFragment"
+        android:label="fragment_saved_country"
+        tools:layout="@layout/fragment_saved_country" />
+</navigation>

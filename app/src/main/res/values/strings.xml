@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CountryApp</string>
+    <string name="list_country_text">List Country</string>
+    <string name="enter_the_country_name_text">Enter the country name...</string>
+    <string name="flag_description_text">Flag Description</string>
+    <string name="official_name_text">Official Name</string>
+    <string name="common_name_text">Common Name</string>
+    <string name="saved_country_text">Saved Country</string>
+    <string name="save_text"><u>Save</u></string>
+    <string name="unsaved_text"><u>Unsaved</u></string>
+    <string name="home_text">Home</string>
+    <string name="do_you_want_to_delete_this_country_text">Do you want to\ndelete this country?</string>
+    <string name="yes_text">Yes</string>
+    <string name="no_text">No</string>
+    <string name="you_havent_save_any_country_text">You haven\'t save any country!</string>
+</resources>

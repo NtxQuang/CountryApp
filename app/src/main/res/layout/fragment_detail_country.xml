@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailCountryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textTitle"
+                style="@style/TextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="CountryName" />
+
+            <ImageView
+                android:id="@+id/buttonSave"
+                android:layout_width="@dimen/_48dp"
+                android:layout_height="@dimen/_48dp"
+                android:padding="@dimen/_8dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:src="@drawable/bg_bookmark_selector" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageFlag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp"
+                    android:adjustViewBounds="true"
+                    tools:src="@tools:sample/avatars" />
+
+                <com.ntxq.countryapp.ui.component.InfoView
+                    android:id="@+id/textCommonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    app:title="@string/common_name_text" />
+
+                <com.ntxq.countryapp.ui.component.InfoView
+                    android:id="@+id/textOfficialName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    app:title="@string/official_name_text" />
+
+                <com.ntxq.countryapp.ui.component.InfoView
+                    android:id="@+id/textDescriptionFLag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    app:title="@string/flag_description_text" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/color_black_alpha_40"
+        android:elevation="@dimen/_16dp"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/color_blue" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
