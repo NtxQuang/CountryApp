@@ -18,6 +18,7 @@ class ListCountryFragment : BaseFragment<FragmentListCountryBinding>() {
     private val viewModel by activityViewModel<ListCountryViewModel>()
     private val countryAdapter by lazy {
         ListCountryAdapter {
+            binding.textInputSearch.setText("")
             navigate(R.id.detailCountryFragment, DetailCountryFragmentArgs(it).toBundle())
         }
     }

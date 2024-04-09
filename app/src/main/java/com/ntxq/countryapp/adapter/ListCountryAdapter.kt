@@ -45,6 +45,7 @@ class ListCountryAdapter(
     }
 
     fun setData(list: List<Country>) {
+        listData.clear()
         listData.addAll(list)
         submitList(list)
     }
